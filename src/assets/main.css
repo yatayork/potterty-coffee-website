@@ -1,0 +1,42 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --main-background: #ffffffa4;
+  --text-color: brown;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text-color);
+  background: var(--main-background);
+  font-family: "Noto Sans TC", sans-serif;
+  transition: color 0.5s, background-color 0.5s;
+  animation: fade 1s linear 0s;
+  line-height: 1.6;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#app {
+  max-width: 100%;
+  margin: 0 auto;
+  font-weight: normal;
+}/*# sourceMappingURL=main.css.map */
