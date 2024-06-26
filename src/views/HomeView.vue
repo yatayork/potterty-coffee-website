@@ -68,6 +68,7 @@
 
   }
 
+  //風景圖位置
   .landscape {
     position: absolute;
     width: 600px;
@@ -76,18 +77,20 @@
     top: 10%;
   }
 
+  //格言
   .motto {
     writing-mode: vertical-lr;
     position: absolute;
     font-size: 16px;
     color: rgba(120, 40, 6, 0.83);
-    font-weight: 400;
     left: 15%;
-    letter-spacing: 0.3em;
+
     z-index: 1;
 
     p {
       background-color: rgba(255, 255, 255, 0.689);
+      font-weight: 300;
+      letter-spacing: 0.6em;
 
       &:nth-child(1) {
         margin-top: 200px;

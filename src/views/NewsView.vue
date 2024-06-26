@@ -3,6 +3,6 @@
 
 <template>
     <div>
-        ContactView
+        NEWS
     </div>
 </template>
