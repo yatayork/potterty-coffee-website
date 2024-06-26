@@ -102,21 +102,7 @@ footer {
 
     //照順序 fb ig yt line
 
-    a:nth-child(1)::before {
-      content: url("https://yatayork.imgix.net/yatatorkLogo.png?w=32&h=32");
-    }
 
-    a:nth-child(2)::before {
-      content: url("https://yatayork.imgix.net/yatatorkLogo.png?w=32&h=32");
-    }
-
-    a:nth-child(3)::before {
-      content: url("https://yatayork.imgix.net/youtube.png?w=32&h=32");
-    }
-
-    a:nth-child(4)::before {
-      content: url("https://yatayork.imgix.net/yatatorkLogo.png?w=32&h=32");
-    }
 
     a {
       border-radius: 50%;
@@ -124,6 +110,22 @@ footer {
 
       &:hover {
         background-color: white;
+      }
+
+      &:nth-child(1)::before {
+        content: url("https://yatayork.imgix.net/yatatorkLogo.png?w=32&h=32");
+      }
+
+      &:nth-child(2)::before {
+        content: url("https://yatayork.imgix.net/yatatorkLogo.png?w=32&h=32");
+      }
+
+      &:nth-child(3)::before {
+        content: url("https://yatayork.imgix.net/youtube.png?w=32&h=32");
+      }
+
+      &:nth-child(4)::before {
+        content: url("https://yatayork.imgix.net/yatatorkLogo.png?w=32&h=32");
       }
     }
   }
