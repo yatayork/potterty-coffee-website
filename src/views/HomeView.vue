@@ -1,5 +1,26 @@
-<script setup>
-import { RouterLink } from 'vue-router'
+<script>
+// import { RouterLink } from 'vue-router'
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Autoplay, Navigation } from 'swiper/modules';
+
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Autoplay, Navigation],
+    };
+  },
+};
 </script>
 
 
@@ -26,17 +47,75 @@ import { RouterLink } from 'vue-router'
     <img class="landscape" src="https://yatayork.imgix.net/countryside_SubcontentPhoto.png" alt="landscape">
 
 
-    <router-link to="/about" class="AboutUsButton">
+    <RouterLink to="/about" class="AboutUsButton">
       <div>
         <p>關於我們</p>
         <p>About Us</p>
       </div>
       <img src="https://yatayork.imgix.net/goto/right-arrow.png?w=64&h=32" alt="">
-    </router-link>
+    </RouterLink>
   </div>
 
   <div class="preOrder">
+    <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{
+      delay: 3000,
+      disableOnInteraction: false,
+    }" :navigation="true" :modules="modules" class="mySwiper">
+      <swiper-slide>
+        <div class="slide-content">
+          <h3>製陶體驗</h3>
+          <span>
+            手指觸摸的角度，是你所思；<br>
+            手掌撫出的弧度，是你所想。<br>
+            與你在這短暫的時刻<br>
+            沉思為杯；<br>
+            包容為碗；<br>
+            為你的作品附著上屬於你的思想<br>
+          </span>
 
+
+        </div>
+        <div class="test">
+          <img src="https://yatayork.imgix.net/countryside_SubcontentPhoto.png" alt="">
+
+        </div>
+
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide-content">
+          <h3>手沖咖啡體驗</h3>
+          <span>
+            「與蘊X咖啡共同合作，<br>
+            三義在地種植的阿拉比卡種咖啡豆」<br>
+            苦澀；煩惱的不如意事<br>
+            香氣；不經意的小確幸<br>
+            甘甜；充滿身心的美好回憶<br>
+            為自己盛上一杯芳香四溢也飽含人生的咖啡<br>
+
+          </span>
+        </div>
+        <div class="test">
+          <img src="https://yatayork.imgix.net/countryside_SubcontentPhoto.png" alt="">
+        </div>
+
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide-content">
+          <h3>ㄎㄣ</h3>
+          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo magnam ipsum nisi in magni excepturioptio
+            debitis, ad cum ex voluptatibus ea officia aliquam nesciunt eligendi illum impedit enim adipisci.</span>
+        </div>
+        <div class="test">
+          <img src="https://yatayork.imgix.net/countryside_SubcontentPhoto.png" alt="">
+        </div>
+      </swiper-slide>
+      <!-- <swiper-slide>
+        <h3>漆陶體驗</h3>
+      </swiper-slide>
+      <swiper-slide>
+        <h3>藍染體驗</h3>
+      </swiper-slide> -->
+    </swiper>
   </div>
 
 
@@ -180,6 +259,61 @@ import { RouterLink } from 'vue-router'
 }
 
 .preOrder {
-  @include backgroundImg-full("https://yatayork.imgix.net/preorder_BackgroundImg.png")
+  @include backgroundImg-full("https://yatayork.imgix.net/preorder_BackgroundImg.png");
+  backdrop-filter: blur(33px);
+
+  .swiper {
+    width: 100%;
+    height: 90%;
+  }
+
+  .swiper-slide {
+
+    text-align: center;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(22px);
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+
+    .slide-content {
+
+      width: 20%;
+      color: white;
+      text-align: left;
+      margin-left: 20%;
+
+
+      h3 {
+
+        font-size: 64px;
+        margin-bottom: 20px;
+      }
+
+
+
+    }
+
+    .test {
+
+      width: 40%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+
+      img {
+        border-radius: 25px;
+        box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.5);
+
+      }
+    }
+
+
+  }
+
+
 }
 </style>
