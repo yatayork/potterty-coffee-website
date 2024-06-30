@@ -31,6 +31,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+//畫面淡入
 @keyframes fade {
   from {
     opacity: 0;
@@ -38,5 +39,82 @@ body {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear-motto {
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+// icon hover 浮動
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(60deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes banner-image-animation {
+  25% {
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
   }
 }

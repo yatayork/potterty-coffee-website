@@ -1,7 +1,8 @@
 @import './base.scss';
-
+@import './mixin.scss';
 #app {
   max-width: 100%;
+  min-width: 700px;
   margin: 0 auto;
   font-weight: normal;
 }
