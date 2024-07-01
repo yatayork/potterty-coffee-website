@@ -48,3 +48,38 @@
   grid-column-start: $grid-column-start;
   grid-column-end: $grid-column-end;
 }
+
+@mixin pageButtonDesign($background-color, $hover-Background-color: #d3b073) {
+  border: 1px solid #e5cda1;
+  padding: 20px;
+  width: 12.5%;
+  background-color: $background-color;
+
+  p {
+    padding: 2px;
+    width: 100%;
+    color: #d3b073;
+    display: flex;
+    justify-content: baseline;
+
+    &:nth-child(1) {
+      font-size: 16px;
+    }
+
+    &:nth-child(2) {
+      font-size: 12px;
+    }
+  }
+
+  img {
+    @include absolute('', 30%, '', 10%);
+  }
+
+  &:hover {
+    background-color: #d3b073;
+
+    p {
+      color: white;
+    }
+  }
+}

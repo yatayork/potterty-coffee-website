@@ -1,26 +1,15 @@
 <script>
-// import { RouterLink } from 'vue-router'
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-
-// import required modules
-import { Autoplay, Navigation } from 'swiper/modules';
-
+import swiperComponent from '@/component/swiperComponent.vue';
 export default {
+  name: "homeView",
   components: {
-    Swiper,
-    SwiperSlide,
+    swiperComponent
   },
   setup() {
-    return {
-      modules: [Autoplay, Navigation],
-    };
   },
 };
+
+
 </script>
 
 
@@ -57,69 +46,9 @@ export default {
   </div>
 
   <div class="preOrder">
-    <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{
-      delay: 3000,
-      disableOnInteraction: false,
-    }" :navigation="true" :modules="modules" class="mySwiper">
-      <swiper-slide>
-        <div class="slide-content">
-          <h3>製陶體驗</h3>
-          <span>
-            手指觸摸的角度，是你所思；<br>
-            手掌撫出的弧度，是你所想。<br>
-            與你在這短暫的時刻<br>
-            沉思為杯；<br>
-            包容為碗；<br>
-            為你的作品附著上屬於你的思想<br>
-          </span>
+    <swiperComponent></swiperComponent>
 
-
-        </div>
-        <div class="test">
-          <img src="https://yatayork.imgix.net/countryside_SubcontentPhoto.png" alt="">
-
-        </div>
-
-      </swiper-slide>
-      <swiper-slide>
-        <div class="slide-content">
-          <h3>手沖咖啡體驗</h3>
-          <span>
-            「與蘊X咖啡共同合作，<br>
-            三義在地種植的阿拉比卡種咖啡豆」<br>
-            苦澀；煩惱的不如意事<br>
-            香氣；不經意的小確幸<br>
-            甘甜；充滿身心的美好回憶<br>
-            為自己盛上一杯芳香四溢也飽含人生的咖啡<br>
-
-          </span>
-        </div>
-        <div class="test">
-          <img src="https://yatayork.imgix.net/countryside_SubcontentPhoto.png" alt="">
-        </div>
-
-      </swiper-slide>
-      <swiper-slide>
-        <div class="slide-content">
-          <h3>ㄎㄣ</h3>
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo magnam ipsum nisi in magni excepturioptio
-            debitis, ad cum ex voluptatibus ea officia aliquam nesciunt eligendi illum impedit enim adipisci.</span>
-        </div>
-        <div class="test">
-          <img src="https://yatayork.imgix.net/countryside_SubcontentPhoto.png" alt="">
-        </div>
-      </swiper-slide>
-      <!-- <swiper-slide>
-        <h3>漆陶體驗</h3>
-      </swiper-slide>
-      <swiper-slide>
-        <h3>藍染體驗</h3>
-      </swiper-slide> -->
-    </swiper>
   </div>
-
-
-
 
 </template>
 
@@ -221,39 +150,7 @@ export default {
   .AboutUsButton {
 
     @include absolute("", 5.5%, "", 12%);
-    border: 1px solid #e5cda1;
-    padding: 20px;
-    width: 12.5%;
-
-
-    p {
-      padding: 2px;
-      width: 100%;
-      color: #d3b073;
-      display: flex;
-      justify-content: baseline;
-
-      &:nth-child(1) {
-        font-size: 16px;
-      }
-
-      &:nth-child(2) {
-        font-size: 12px;
-      }
-    }
-
-    img {
-      @include absolute("", 30%, "", 10%)
-    }
-
-
-    &:hover {
-      background-color: #d3b073;
-
-      p {
-        color: white;
-      }
-    }
+    @include pageButtonDesign("", "");
   }
 
 }
@@ -261,59 +158,37 @@ export default {
 .preOrder {
   @include backgroundImg-full("https://yatayork.imgix.net/preorder_BackgroundImg.png");
   backdrop-filter: blur(33px);
+  margin-bottom: 64px;
+  position: relative;
+  margin-bottom: 5%;
 
-  .swiper {
-    width: 100%;
-    height: 90%;
-  }
+  .reserveButton {
+    min-width: 20%;
+    background-color: black;
+    color: #d3b073;
 
-  .swiper-slide {
-
-    text-align: center;
-    font-size: 18px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(22px);
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-
-    .slide-content {
-
-      width: 20%;
-      color: white;
-      text-align: left;
-      margin-left: 20%;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 9%;
+    left: 20%;
+    font-size: 32px;
+    z-index: 1;
 
 
-      h3 {
-
-        font-size: 64px;
-        margin-bottom: 20px;
-      }
-
-
-
-    }
-
-    .test {
-
-      width: 40%;
-      height: 100%;
+    div {
       display: flex;
       justify-content: center;
+      align-items: center;
 
 
-      img {
-        border-radius: 25px;
-        box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.5);
-
-      }
     }
 
 
+    &:hover {
+      background-color: #d3b073;
+      color: white;
+    }
   }
 
-
 }
-</style>
+</style>../component/swiperComponent.vue

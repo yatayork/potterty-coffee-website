@@ -100,14 +100,6 @@ body {
     opacity: 0;
   }
 }
-@keyframes banner-image-animation {
-  25% {
-    opacity: 1;
-  }
-  95%, 100% {
-    opacity: 0;
-  }
-}
 #app {
   max-width: 100%;
   min-width: 700px;
