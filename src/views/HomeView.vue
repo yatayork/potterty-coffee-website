@@ -1,14 +1,24 @@
 <script>
 import swiperComponent from '@/component/swiperComponent.vue';
+import cardComponent from '@/component/CardComponent.vue';
+import mailComponent from '@/component/MailComponent.vue';
+import mapComponent from '@/component/MapComponent.vue';
+
 export default {
   name: "homeView",
   components: {
-    swiperComponent
+    swiperComponent,
+    cardComponent,
+    mailComponent,
+    mapComponent,
+
   },
   setup() {
   },
 };
 
+
+// 
 
 </script>
 
@@ -47,6 +57,21 @@ export default {
 
   <div class="preOrder">
     <swiperComponent></swiperComponent>
+  </div>
+
+  <div class="news">
+    <h3>最新消息</h3>
+    <cardComponent></cardComponent>
+  </div>
+  <div class="contact">
+    <!-- map元件 左 -->
+    <!-- email元件 右-->
+    <h3>聯絡我們</h3>
+    <div class="info">
+      <mapComponent></mapComponent>
+      <mailComponent></mailComponent>
+    </div>
+
 
   </div>
 
@@ -55,14 +80,11 @@ export default {
 <style lang="scss" scoped>
 @import "../src/assets/main.scss";
 
-
 // @mixin fontConfig (字體大小,顏色,字體粗細,行高,字間距)
 // ($fontSize, $color, $fontWeight: 400, $lineHeight, $letterSpacing)
 
 // @mixin backgroundImg-full($imgUrl)
 // 大區塊背景 width100% 高500px(
-
-
 .banner {
   @include backgroundImg-full("https://yatayork.imgix.net/ComfyUI_banner_ (1).png");
   animation: banner-image-animation linear;
@@ -86,7 +108,6 @@ export default {
   animation: appear linear forwards;
   animation-timeline: view();
   animation-range: entry 200px;
-
   margin-bottom: 64px;
 
   .intro {
@@ -158,37 +179,43 @@ export default {
 .preOrder {
   @include backgroundImg-full("https://yatayork.imgix.net/preorder_BackgroundImg.png");
   backdrop-filter: blur(33px);
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   position: relative;
-  margin-bottom: 5%;
-
-  .reserveButton {
-    min-width: 20%;
-    background-color: black;
-    color: #d3b073;
-
-    border-radius: 20px;
-    position: absolute;
-    bottom: 9%;
-    left: 20%;
-    font-size: 32px;
-    z-index: 1;
 
 
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
 
-
-    }
-
-
-    &:hover {
-      background-color: #d3b073;
-      color: white;
-    }
-  }
 
 }
-</style>../component/swiperComponent.vue
+
+.news {
+
+  display: block;
+  justify-content: center;
+  width: 60%;
+  margin: 0% 20% 1% 20%;
+
+  h3 {
+    display: flex;
+    justify-content: center;
+    min-width: 60%;
+    @include fontConfig(32px, "", 400, "", 0.2em)
+  }
+}
+
+.contact {
+
+  margin-bottom: 64px;
+
+  h3 {
+    @include fontConfig(32px, "", 400, "", 0.2em);
+    text-align: center;
+  }
+
+  .info {
+    display: flex;
+    margin: 0% 20% 0% 20%;
+
+
+  }
+}
+</style>../component/swiperComponent.vue@/component/MailComponent.vue

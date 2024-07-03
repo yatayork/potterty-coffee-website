@@ -43,8 +43,6 @@ import { Autoplay, Navigation } from 'swiper/modules';
 
 export default {
 
-
-
   components: {
     Swiper,
     SwiperSlide,
@@ -87,7 +85,7 @@ export default {
 
 <style scoped lang="scss">
 .swiper {
-  width: 100%;
+  min-width: 100%;
   height: 90%;
 }
 
@@ -102,7 +100,7 @@ export default {
 
   .slide-content {
 
-    min-width: 20%;
+    min-width: 30%;
     width: 30%;
     height: 100%;
     color: white;

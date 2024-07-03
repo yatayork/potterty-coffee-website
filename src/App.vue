@@ -13,8 +13,6 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="page">
         <router-link to="/about">關於我們</router-link>
         <router-link to="/PreOrder">預約體驗</router-link>
-        <router-link to="/ContactMail">聯絡我們</router-link>
-        <router-link to="/News">最新消息</router-link>
       </div>
     </header>
     <!-- 頁首 -->
@@ -71,7 +69,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 5%;
+    margin-left: 10%;
 
     a {
       font-weight: 500;
