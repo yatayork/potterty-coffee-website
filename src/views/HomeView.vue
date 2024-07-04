@@ -220,6 +220,59 @@ export default {
 
 }
 
+
+
+
+.preOrder {
+  @include backgroundImg-full("https://yatayork.imgix.net/preorder_BackgroundImg.png");
+  backdrop-filter: blur(33px);
+  margin-bottom: 48px;
+  position: relative;
+
+
+
+
+}
+
+.news {
+
+  display: block;
+  justify-content: center;
+  width: 60%;
+  margin: 0% 20% 1% 20%;
+
+  h3 {
+    display: flex;
+    justify-content: center;
+    min-width: 60%;
+    @include fontConfig(32px, "", 400, "", 0.2em)
+  }
+}
+
+.contact {
+
+  margin-bottom: 64px;
+
+  h3 {
+    @include fontConfig(32px, "", 400, "", 0.2em);
+    text-align: center;
+  }
+
+  .info {
+    min-width: 60%;
+    display: flex;
+    margin: 0% 20% 0% 20%;
+
+
+
+
+  }
+
+
+
+}
+
+
 @media (max-width: 1600px) {
   .About {
 
@@ -279,53 +332,12 @@ export default {
 
 
 
-
 }
 
-
-.preOrder {
-  @include backgroundImg-full("https://yatayork.imgix.net/preorder_BackgroundImg.png");
-  backdrop-filter: blur(33px);
-  margin-bottom: 48px;
-  position: relative;
-
-
-
-
-}
-
-.news {
-
-  display: block;
-  justify-content: center;
-  width: 60%;
-  margin: 0% 20% 1% 20%;
-
-  h3 {
-    display: flex;
-    justify-content: center;
-    min-width: 60%;
-    @include fontConfig(32px, "", 400, "", 0.2em)
-  }
-}
-
-.contact {
-
-  margin-bottom: 64px;
-
-  h3 {
-    @include fontConfig(32px, "", 400, "", 0.2em);
-    text-align: center;
-  }
-
+@media(max-width:1200px) {
   .info {
-    min-width: 60%;
-    display: flex;
-    margin: 0% 20% 0% 20%;
-
-
-
-
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>../component/swiperComponent.vue@/component/MailComponent.vue

@@ -68,10 +68,12 @@ form {
         font-weight: 800;
         border: none;
         background-color: #e5cda1;
-        width: 20%;
+        width: 95%;
+        margin-left: 1.5%;
+        margin-right: 2.5%;
         border-radius: 10px;
         padding: 10px 20px;
-        margin: 0% 0% 0% 77%;
+
 
         &:hover {
             background-color: black;
@@ -80,5 +82,12 @@ form {
     }
 
 
+}
+
+@media(max-width:1200px) {
+    form {
+        margin-top: 5%;
+        margin-left: 0%;
+    }
 }
 </style>./MailComponent.vue

@@ -19,7 +19,17 @@ const center = { lat: 24.378835, lng: 120.758986 }
 </script>
 
 <template>
-    <GoogleMap :api-promise="apiPromise" style="width: 50%; height: 400px;" :center="center" :zoom="15">
+    <GoogleMap :api-promise="apiPromise" style="width: 60%; height: 400px;" :center="center" :zoom="15">
         <Marker :options="{ position: center }" />
     </GoogleMap>
 </template>
+
+<style>
+@media(max-width:1200px) {
+
+    .GoogleMap {
+
+        width: 70%;
+    }
+}
+</style>
