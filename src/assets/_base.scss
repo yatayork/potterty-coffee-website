@@ -14,11 +14,18 @@
   text-decoration: none;
 }
 
+@font-face {
+  font-family: 'Iansui';
+  src:
+    url('https://storage.googleapis.com/yatafont/iansui/Iansui-Regular.ttf') format('truetype'),
+    url('https://storage.googleapis.com/yatafont/iansui/Iansui-Regular.woff') format('woff');
+}
+
 body {
   min-height: 100vh;
   color: var(--text-color);
   background: var(--main-background);
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Iansui', sans-serif;
   transition:
     color 0.5s,
     background-color 0.5s;

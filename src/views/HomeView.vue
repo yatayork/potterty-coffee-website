@@ -29,31 +29,40 @@ export default {
     <img class="logo" src="https://yatayork.imgix.net/yatatorkLogo.png" alt="logo">
   </div>
   <div class="About">
-    <img class="create" src="https://yatayork.imgix.net/_pottery.jpeg" alt="create">
-    <span class="intro">
-      亞塔是一位專業陶藝老師<br>
-      於民國99年創立「亞塔悠克」燒窯社團。<br>
-      以超過20年的陶藝創作和教學經驗回歸鄉土<br>
-    </span>
 
-    <span class="motto">
-
-      <p>將陶藝帶入自然，與自然相伴</p>
-      <p>創造出地區獨一無二的鄉土陶藝</p>
-      <p>集合了一群愛陶之人</p>
-    </span>
-
-    <img class="landscape" src="https://yatayork.imgix.net/countryside_SubcontentPhoto.png" alt="landscape">
+    <div class="landscape">
+      <img src="https://yatayork.imgix.net/countryside_SubcontentPhoto.png" alt="landscape">
+      <span class="motto">
+        <p>將陶藝帶入自然，與自然相伴</p>
+        <p>創造出地區獨一無二的鄉土陶藝</p>
+        <p>集合了一群愛陶之人</p>
+      </span>
+    </div>
 
 
-    <RouterLink to="/about" class="AboutUsButton">
-      <div>
-        <p>關於我們</p>
-        <p>About Us</p>
-      </div>
-      <img src="https://yatayork.imgix.net/goto/right-arrow.png?w=64&h=32" alt="">
-    </RouterLink>
+    <div class="create">
+      <img src="https://yatayork.imgix.net/_pottery.jpeg" alt="create">
+
+      <p class="intro">
+        亞塔是一位專業陶藝老師<br>
+        於民國99年創立「亞塔悠克」燒窯社團。<br>
+        以超過20年的陶藝創作和教學經驗回歸鄉土<br>
+      </p>
+
+      <RouterLink to="/about">
+        <span>關於我們</span><br>
+        <span>AboutUs</span>
+      </RouterLink>
+
+
+
+    </div>
+
+
+    <!-- <img src="https://yatayork.imgix.net/goto/right-arrow.png?w=64&h=32" alt=""> -->
   </div>
+
+
 
   <div class="preOrder">
     <swiperComponent></swiperComponent>
@@ -86,6 +95,7 @@ export default {
 // @mixin backgroundImg-full($imgUrl)
 // 大區塊背景 width100% 高500px(
 .banner {
+  min-width: 763px;
   @include backgroundImg-full("https://yatayork.imgix.net/ComfyUI_banner_ (1).png");
   animation: banner-image-animation linear;
   animation-timeline: view();
@@ -103,8 +113,7 @@ export default {
 
 
   width: 100%;
-  height: 700px;
-  position: relative;
+  display: flex;
   animation: appear linear forwards;
   animation-timeline: view();
   animation-range: entry 200px;
@@ -112,69 +121,167 @@ export default {
 
   .intro {
 
-    @include absolute("", 5%, "", 29%);
+
     @include fontConfig(16px, #200b5b, 400, 2.2em, 0.3em)
   }
 
   //風景圖位置
+
   .landscape {
-    width: 600px;
-    @include absolute(10%, "", 3%, "");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    min-width: 50%;
+
+    img {
+      width: 550px;
+      margin-right: 5%;
+    }
+
+    .motto {
+      writing-mode: vertical-lr;
+      @include fontConfig(22px, #782806, 700, "", 0.6em);
+
+
+
+      p {
+
+        text-decoration-line: underline;
+        text-underline-offset: 3px;
+
+        animation: appear-motto linear;
+        animation-timeline: view();
+        animation-range: cover 10px;
+
+
+        &:nth-child(1) {
+
+          margin-top: 175px;
+          animation-delay: 1.4s;
+
+        }
+
+        &:nth-child(2) {
+          margin: 100px 50px 0px 50px;
+          animation-delay: 1.3s;
+        }
+
+        &:nth-child(3) {
+          margin-top: 50px;
+          animation-delay: 1.2s;
+        }
+      }
+
+
+    }
   }
 
   //格言
-  .motto {
-    writing-mode: vertical-lr;
-    z-index: 1;
-    @include absolute("", "", 37%, "");
-    @include fontConfig(22px, #782806, 700, "", 0.6em);
 
 
+  .create {
 
-    p {
-
-      text-decoration-line: underline;
-      text-underline-offset: 3px;
-
-      animation: appear-motto linear;
-      animation-timeline: view();
-      animation-range: cover 10px;
+    min-width: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 
 
-      &:nth-child(1) {
+    img {
+      width: 80%;
+    }
 
-        margin-top: 175px;
-        animation-delay: 1.4s;
+    .intro {
 
-      }
+      padding-top: 10px;
 
-      &:nth-child(2) {
-        margin: 100px 50px 0px 50px;
-        animation-delay: 1.3s;
-      }
-
-      &:nth-child(3) {
-        margin-top: 50px;
-        animation-delay: 1.2s;
-      }
     }
 
 
-  }
+    a {
+      border: 1px solid #d3b073;
+      position: relative;
+      padding: 1em 2em 1em 2em;
+      @include pageButtonDesign(white, "");
 
-  .create {
-    width: 800px;
-    position: absolute;
-    right: 10%;
-  }
 
-  .AboutUsButton {
+      &:after {
+        @include absolute("", 1em, "", 10%);
 
-    @include absolute("", 5.5%, "", 12%);
-    @include pageButtonDesign("", "");
+        content: url("https://yatayork.imgix.net/goto/right-arrow.png?w=32&h=32");
+
+
+      }
+
+    }
+
   }
 
 }
+
+@media (max-width: 1600px) {
+  .About {
+
+    margin-top: 32px;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    .landscape {
+      margin-top: 0%;
+
+
+      .motto {
+        p {
+          width: 20%;
+
+
+          &:nth-child(1) {
+            animation-delay: 1.4s;
+
+          }
+
+          &:nth-child(2) {
+            animation-delay: 1.3s;
+          }
+
+          &:nth-child(3) {
+            animation-delay: 1.2s;
+          }
+        }
+
+      }
+    }
+
+    .create {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      position: relative;
+
+      .intro {
+        text-align: center;
+
+        width: 70%;
+      }
+
+
+      img {
+        width: 700px;
+      }
+
+
+    }
+
+  }
+
+
+
+
+}
+
 
 .preOrder {
   @include backgroundImg-full("https://yatayork.imgix.net/preorder_BackgroundImg.png");
@@ -212,8 +319,11 @@ export default {
   }
 
   .info {
+    min-width: 60%;
     display: flex;
     margin: 0% 20% 0% 20%;
+
+
 
 
   }

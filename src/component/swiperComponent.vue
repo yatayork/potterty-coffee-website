@@ -85,7 +85,7 @@ export default {
 
 <style scoped lang="scss">
 .swiper {
-  min-width: 100%;
+  width: 100%;
   height: 90%;
 }
 
@@ -133,6 +133,9 @@ export default {
     }
   }
 
+
+
+
   .reserveButton {
     min-width: 20%;
     background-color: black;
@@ -158,6 +161,31 @@ export default {
     &:hover {
       background-color: #d3b073;
       color: white;
+    }
+  }
+
+
+  @media (width <1360px) {
+    .itemPhoto {
+      display: none;
+    }
+
+    .slide-content {
+      width: 100%;
+
+      margin-left: 0%;
+      text-align: center;
+
+      h3 {
+        margin-top: 2%;
+      }
+    }
+
+    .reserveButton {
+      border: 1px solid black;
+      width: 50%;
+      left: 25%;
+
     }
   }
 

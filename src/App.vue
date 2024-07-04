@@ -32,7 +32,7 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
       <div class="tel">
         <p>聯絡我們:TEL:09-12345678<a href="tel:+0912345678"></a></p>
-        <p>窯址:XX縣XX鎮XX里XX路X麟X段XX號<a href=""></a></p>
+        <p>窯址:XX縣XX鎮XX里XX路X麟X段XX號<a href="https://www.google.com/maps/"></a></p>
       </div>
       <div class="copyright">
         <p>Copyright &copy; 2024 yatayork. All rights reserved. </p>
@@ -53,30 +53,26 @@ import { RouterLink, RouterView } from 'vue-router'
 
 // 頁尾logo
 .Logo-big {
-  width: 256px;
+  width: 10%;
 }
 
 header {
 
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+
+  @include display-flex(center, center, "", "");
 
   .page {
-    width: 40%;
+    min-width: 15%;
+    margin-left: 3%;
+    @include display-flex("", "", "", center);
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 10%;
 
     a {
-      font-weight: 500;
-      color: #c09562;
-      padding-left: 10px;
-      padding-right: 10px;
-      font-size: 25px;
+      @include fontConfig(25px, #c09562, "", "", "");
+      margin: 0px 10% 0px 2%;
+      min-width: 50%;
+
 
 
       &:hover {
@@ -87,14 +83,15 @@ header {
   }
 
 
+
+
 }
 
 footer {
   width: 100%;
   background-color: #e5cda1b0;
-  display: flex;
+  @include display-flex("", "", "", center);
   flex-direction: column;
-  align-items: center;
 
   img {
     margin: 32px 0 16px 0;
@@ -102,9 +99,8 @@ footer {
 
 
   .SocialButton {
-    width: 12%;
-    display: flex;
-    justify-content: space-between;
+    min-width: 15%;
+    @include display-flex(space-between, "", "", "");
     margin-right: 2%;
 
     //照順序 fb ig yt line HEX #b57341(顏色)
@@ -134,16 +130,14 @@ footer {
 
   .tel {
     width: 100%;
-    height: 100%;
     margin-top: 1rem;
     letter-spacing: 0.2em;
 
     p {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+      @include display-flex(center, "", "", center);
+
       font-size: 18px;
-      font-weight: 600;
 
       a {
         padding-top: 6px;
