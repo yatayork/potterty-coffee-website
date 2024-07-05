@@ -9,22 +9,6 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-
-      component: () => import('../views/AboutView.vue')
-    },
-    {
-      path: '/ContactMail',
-      name: 'ContactMail',
-      component: () => import('../views/ContactView.vue')
-    },
-    {
-      path: '/News',
-      name: 'news',
-      component: () => import('../views/NewsView.vue')
-    },
-    {
       path: '/preOrder',
       name: 'preOrder',
       component: () => import('../views/PreOrderView.vue')

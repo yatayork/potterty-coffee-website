@@ -41,6 +41,7 @@ form {
     width: 100%;
     display: flex;
     flex-direction: column;
+    text-align: left;
     margin-left: 20%;
     font-size: 16px;
 
@@ -68,9 +69,8 @@ form {
         font-weight: 800;
         border: none;
         background-color: #e5cda1;
-        width: 95%;
-        margin-left: 1.5%;
-        margin-right: 2.5%;
+        width: 100%;
+
         border-radius: 10px;
         padding: 10px 20px;
 

@@ -43,17 +43,18 @@ export default {
     <div class="create">
       <img src="https://yatayork.imgix.net/_pottery.jpeg" alt="create">
 
-      <p class="intro">
-        亞塔是一位專業陶藝老師<br>
-        於民國99年創立「亞塔悠克」燒窯社團。<br>
-        以超過20年的陶藝創作和教學經驗回歸鄉土<br>
-      </p>
+      <div class="intro">
+        <p>
+          亞塔是一位專業陶藝老師<br>
+          於民國99年創立「亞塔悠克」燒窯社團。<br>
+          以超過20年的陶藝創作和教學經驗回歸鄉土<br>
+        </p>
 
-      <RouterLink to="/about">
-        <span>關於我們</span><br>
-        <span>AboutUs</span>
-      </RouterLink>
-
+        <RouterLink to="/about">
+          <span>關於我們</span><br>
+          <span>AboutUs</span>
+        </RouterLink>
+      </div>
 
 
     </div>
@@ -137,6 +138,8 @@ export default {
     img {
       width: 550px;
       margin-right: 5%;
+      border-radius: 20px;
+      box-shadow: 10px 10px 0px 3px rgba(0, 0, 0, 0.114);
     }
 
     .motto {
@@ -190,31 +193,34 @@ export default {
 
     img {
       width: 80%;
+      border-radius: 20px;
     }
 
     .intro {
-
+      display: flex;
       padding-top: 10px;
 
-    }
+      a {
+
+        border: 1px solid #d3b073;
+        position: relative;
+        padding: 1em 1em 0em 1em;
+        margin-left: 5%;
+        @include pageButtonDesign(transparent, "");
+
+        &:after {
+          @include absolute("", 2em, "", 2em);
+
+          content: url("https://yatayork.imgix.net/goto/right-arrow.png?w=32&h=32");
 
 
-    a {
-      border: 1px solid #d3b073;
-      position: relative;
-      padding: 1em 2em 1em 2em;
-      @include pageButtonDesign(white, "");
-
-
-      &:after {
-        @include absolute("", 1em, "", 10%);
-
-        content: url("https://yatayork.imgix.net/goto/right-arrow.png?w=32&h=32");
-
+        }
 
       }
-
     }
+
+
+
 
   }
 

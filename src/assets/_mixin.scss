@@ -65,10 +65,10 @@
   span {
     width: 100%;
     color: #d3b073;
-    padding: 5px;
 
     &:nth-child(1) {
       border-bottom: 1px solid #d3b073;
+      padding-bottom: 10px;
     }
   }
 
@@ -88,11 +88,18 @@
   }
 }
 
-@mixin pad {
-  @media (width< 1200px) {
-    .About {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+@mixin gridConfig($grid-column-start, $grid-column-end, $grid-row-start, $grid-row-end) {
+  grid-column-start: $grid-column-start;
+  grid-column-end: $grid-column-end;
+  grid-row-start: $grid-row-start;
+  grid-row-end: $grid-row-end;
 }
+
+// @mixin pad {
+//   @media (width< 1200px) {
+//     .About {
+//       display: flex;
+//       flex-direction: column;
+//     }
+//   }
+// }

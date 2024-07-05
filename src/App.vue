@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <router-link to="/"><img class="Logo-small" src="https://yatayork.imgix.net/yatatorkLogo.png"
           alt="logo"></router-link>
       <div class="page">
-        <router-link to="/about">關於我們</router-link>
+
         <router-link to="/PreOrder">預約體驗</router-link>
       </div>
     </header>
@@ -70,8 +70,9 @@ header {
 
     a {
       @include fontConfig(25px, #c09562, "", "", "");
-      margin: 0px 10% 0px 2%;
+      margin: 0px 5% 0px 5%;
       min-width: 50%;
+      text-align: center;
 
 
 
