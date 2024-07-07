@@ -59,13 +59,13 @@ export default {
           沉思為杯；<br>
           包容為碗；<br>
           為你的作品附著上屬於你的思想<br>`,
-        img: "https://yatayork.imgix.net/countryside_SubcontentPhoto.png"
+        img: "https://yatayork.imgix.net/swiper/pottery_doll.png"
       },
       {
         id: 2,
         title: "手沖咖啡體驗",
         content: "與蘊X咖啡共同合作，<br>三義在地種植的阿拉比卡種咖啡豆<br>苦澀；煩惱的不如意事<br>香氣；不經意的小確幸<br>甘甜；充滿身心的美好回憶<br>為自己盛上一杯芳香四溢也飽含人生的咖啡<br>",
-        img: "https://yatayork.imgix.net/countryside_SubcontentPhoto.png"
+        img: "https://yatayork.imgix.net/swiper/coffee_swiper.png"
       },
     ]
 
